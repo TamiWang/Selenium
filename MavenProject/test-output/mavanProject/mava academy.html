@@ -1,0 +1,192 @@
+<html>
+<head>
+<title>TestNG:  mava academy</title>
+<link href="../testng.css" rel="stylesheet" type="text/css" />
+<link href="../my-testng.css" rel="stylesheet" type="text/css" />
+
+<style type="text/css">
+.log { display: none;} 
+.stack-trace { display: none;} 
+</style>
+<script type="text/javascript">
+<!--
+function flip(e) {
+  current = e.style.display;
+  if (current == 'block') {
+    e.style.display = 'none';
+    return 0;
+  }
+  else {
+    e.style.display = 'block';
+    return 1;
+  }
+}
+
+function toggleBox(szDivId, elem, msg1, msg2)
+{
+  var res = -1;  if (document.getElementById) {
+    res = flip(document.getElementById(szDivId));
+  }
+  else if (document.all) {
+    // this is the way old msie versions work
+    res = flip(document.all[szDivId]);
+  }
+  if(elem) {
+    if(res == 0) elem.innerHTML = msg1; else elem.innerHTML = msg2;
+  }
+
+}
+
+function toggleAllBoxes() {
+  if (document.getElementsByTagName) {
+    d = document.getElementsByTagName('div');
+    for (i = 0; i < d.length; i++) {
+      if (d[i].className == 'log') {
+        flip(d[i]);
+      }
+    }
+  }
+}
+
+// -->
+</script>
+
+</head>
+<body>
+<h2 align='center'>mava academy</h2><table border='1' align="center">
+<tr>
+<td>Tests passed/Failed/Skipped:</td><td>1/1/0</td>
+</tr><tr>
+<td>Started on:</td><td>Wed Jan 10 17:10:15 CST 2018</td>
+</tr>
+<tr><td>Total time:</td><td>19 seconds (19369 ms)</td>
+</tr><tr>
+<td>Included groups:</td><td></td>
+</tr><tr>
+<td>Excluded groups:</td><td></td>
+</tr>
+</table><p/>
+<small><i>(Hover the method name to see the test class name)</i></small><p/>
+<table width='100%' border='1' class='invocation-failed'>
+<tr><td colspan='4' align='center'><b>FAILED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Instance</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td width="30%"><b>Exception</b></td>
+</tr>
+<tr>
+<td title='academy.ValidateTitle.basePageNavigation()'><b>basePageNavigation</b><br>Test class:mava academy</td>
+<td>academy.ValidateTitle@65bd831f</td><td>0</td>
+<td><div><pre>org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.47.2', revision: '4d972c01cab1304452627f837654326a11eb92fe', time: '2015-09-24 09:17:17'
+System info: host: 'user-PC', ip: '192.168.1.75', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:126)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:568)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at pageObjects.LandingPage.getTitle(LandingPage.java:17)
+	at academy.ValidateTitle.basePageNavigation(ValidateTitle.java:34)
+... Removed 22 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace1433554787", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace1433554787'><pre>org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.47.2', revision: '4d972c01cab1304452627f837654326a11eb92fe', time: '2015-09-24 09:17:17'
+System info: host: 'user-PC', ip: '192.168.1.75', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:126)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:568)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at pageObjects.LandingPage.getTitle(LandingPage.java:17)
+	at academy.ValidateTitle.basePageNavigation(ValidateTitle.java:34)
+	at sun.reflect.NativeMethodAccessorImpl.invoke0(Native Method)
+	at sun.reflect.NativeMethodAccessorImpl.invoke(NativeMethodAccessorImpl.java:57)
+	at sun.reflect.DelegatingMethodAccessorImpl.invoke(DelegatingMethodAccessorImpl.java:43)
+	at java.lang.reflect.Method.invoke(Method.java:601)
+	at org.testng.internal.MethodHelper.invokeMethod(MethodHelper.java:643)
+	at org.testng.internal.Invoker.invokeMethod(Invoker.java:559)
+	at org.testng.internal.Invoker.invokeTestMethod(Invoker.java:723)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1027)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:953)
+	at org.testng.TestRunner.privateRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:316)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:195)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:903)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:872)
+	at org.testng.TestNG.run(TestNG.java:780)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:75)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:127)
+</pre></div></td>
+</tr>
+<tr>
+<td title='academy.ValidateTitle.basePageNavigation()'><b>basePageNavigation</b><br>Test class:mava academy</td>
+<td>academy.ValidateTitle@65bd831f</td><td>0</td>
+<td><div><pre>org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.47.2', revision: '4d972c01cab1304452627f837654326a11eb92fe', time: '2015-09-24 09:17:17'
+System info: host: 'user-PC', ip: '192.168.1.75', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:126)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:568)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:320)
+	at resources.Base.getScreenShot(Base.java:49)
+	at academy.Listeners.onTestFailure(Listeners.java:33)
+... Removed 18 stack frames</pre></div><a href='#' onClick='toggleBox("stack-trace618729232", this, "Click to show all stack frames", "Click to hide stack frames")'>Click to show all stack frames</a>
+<div class='stack-trace' id='stack-trace618729232'><pre>org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.47.2', revision: '4d972c01cab1304452627f837654326a11eb92fe', time: '2015-09-24 09:17:17'
+System info: host: 'user-PC', ip: '192.168.1.75', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:126)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:568)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:320)
+	at resources.Base.getScreenShot(Base.java:49)
+	at academy.Listeners.onTestFailure(Listeners.java:33)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1634)
+	at org.testng.internal.Invoker.runTestListeners(Invoker.java:1618)
+	at org.testng.internal.Invoker.handleInvocationResults(Invoker.java:1330)
+	at org.testng.internal.Invoker.invokeTestMethods(Invoker.java:1040)
+	at org.testng.internal.TestMethodWorker.invokeTestMethods(TestMethodWorker.java:137)
+	at org.testng.internal.TestMethodWorker.run(TestMethodWorker.java:121)
+	at org.testng.TestRunner.runWorkers(TestRunner.java:953)
+	at org.testng.TestRunner.privateRun(TestRunner.java:633)
+	at org.testng.TestRunner.run(TestRunner.java:505)
+	at org.testng.SuiteRunner.runTest(SuiteRunner.java:359)
+	at org.testng.SuiteRunner.runSequentially(SuiteRunner.java:354)
+	at org.testng.SuiteRunner.privateRun(SuiteRunner.java:316)
+	at org.testng.SuiteRunner.run(SuiteRunner.java:195)
+	at org.testng.TestNG.createAndRunSuiteRunners(TestNG.java:903)
+	at org.testng.TestNG.runSuitesLocally(TestNG.java:872)
+	at org.testng.TestNG.run(TestNG.java:780)
+	at org.testng.remote.RemoteTestNG.run(RemoteTestNG.java:75)
+	at org.testng.remote.RemoteTestNG.main(RemoteTestNG.java:127)
+</pre></div></td>
+</tr>
+</table><p>
+<table width='100%' border='1' class='invocation-passed'>
+<tr><td colspan='4' align='center'><b>PASSED TESTS</b></td></tr>
+<tr><td><b>Test method</b></td>
+<td><b>Instance</b></td>
+<td width="10%"><b>Time (seconds)</b></td>
+<td width="30%"><b>Exception</b></td>
+</tr>
+<tr>
+<td title='academy.HomePageTest.basePage()'><b>basePage</b><br>Test class:mava academy</td>
+<td>academy.HomePageTest@225a8897</td><td>9</td>
+<td></td>
+</tr>
+</table><p>
+</body>
+</html>

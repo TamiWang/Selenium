@@ -1,0 +1,19 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite verbose="0" name="Failed suite [mavanProject]">
+  <listeners>
+    <listener class-name="academy.Listeners"/>
+    <listener class-name="resources.ExtentReporterNG"/>
+  </listeners>
+  <test name="maven academy gcpi(failed)">
+    <classes>
+      <class name="gcpi.FactoryConfigTest">
+        <methods>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+          <include name="createFactoryConfigTest"/>
+        </methods>
+      </class> <!-- gcpi.FactoryConfigTest -->
+    </classes>
+  </test> <!-- maven academy gcpi(failed) -->
+</suite> <!-- Failed suite [mavanProject] -->

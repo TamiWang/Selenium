@@ -1,0 +1,143 @@
+Build Framework from Scratch
+
+1. Creating Maven Test Project with Eclipse Integration (including configure framework dependencies in pox.xml)
+2. Creating Base and utility functions (@Test)
+3. Organizing Page Objects (Create "pageObjects" package. Create "resources" package including base.java and data.properties)
+4. Adding Tests in the "test" source folder
+5. Datadriving/Parameterizing Tests  (data.properties, @DataProvider)
+6. Converting into TestNG Framework (add @BeforeTest initialize(), @AfterTest tearDown(), create testng.xml to run all the test cases at one click)
+7. Asserting the Testcases with Validation  (Assert.assertEquals(), Assert.assertTrue())
+8. Integrate TestNG Framwork into Maven (Integrate testng.xml into Maven pom.xml, add plugin, run with "mvn clean compile", "mvn test")
+7. Log4j API for Logging inside Framework (add log4j dependency in pom.xml, create log4j2.xml in resources package, set Project->Build Automatically)
+    Give below <resource> tag in pom.xml, so Maven will look into src/main/resources and execute log4j2.xml, so log.info in src/test/java will be identified and executed.
+    Below <resource> tag shows the path src/main/resources to find out log4j2.xml:
+    
+    <resources>
+        <resource>
+        <directory>src/main/resources</directory>
+        <filtering>true</filtering>
+      </resource>
+    </resources>
+
+	Refresh the project, then you will see logs folder with logs under Project directory.
+	
+8. Testng Listeners
+9. Screenshot on Test Failures
+    Add below method in Base.java for getting screenshot:
+	public void getScreenShot(String result) throws IOException{
+		File src = ((TakesScreenshot)driver).getScreenshotAs(OutputType.FILE);
+		FileUtils.copyFile(src, new File("E://selenium//mavenRepo//ScreenShot//" + result + "screenshot.png"));
+		
+	}
+	
+	Add Listener.java class in src/test/java/academy package. In this class, implements ITestListener interface, add unimplemented methods,
+	call base.getScreenShot() in method onTestFailure().
+	    // screenshot
+		try {
+			base.getScreenShot(result.getName());
+		} catch (IOException e) {
+			// TODO Auto-generated catch block
+			e.printStackTrace();
+		}
+    
+    Then add Listener.java path to testng.xml to inform testng.xml where the Listeners.java is located.
+    <listeners>
+		<listener class-name="academy.Listeners" />
+	</listeners>
+	
+10. Creating Excellent HTML reports for Test Results
+
+
+1> Create extentreports dependency in pom.xml
+http://extentreports.com/ -> DOCUMENTATION -> Version3 -> Java -> Maven(left side Menu) -> add dependency to pom.xml
+
+  <dependency>
+    <groupId>com.aventstack</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>3.1.2</version>
+  </dependency>
+  <dependency>
+    <groupId>com.relevantcodes</groupId>
+    <artifactId>extentreports</artifactId>
+    <version>2.40.2</version>
+  </dependency>
+
+2> Create ExtentReporterNG.java in resources source folder.
+
+3> Add path to testng.xml listener tag to tell testng.xml where the ExtentReporterNG.java located.
+	<listeners>
+		<listener class-name="academy.Listeners" />
+		<listener class-name="resources.ExtentReporterNG" />
+	</listeners>
+
+4> Execute test
+Refresh the project when the test execution is done.
+If run test with testng.xml, the ExtentReportsTestNG.xml will be created in test-output folder.
+If run test with maven command, the ExtentReportsTestNG.xml will be created in target folder.
+
+	
+11. Jenkins - Continuous Integration
+1> Run Jenkins
+   > cd E:\selenium\jenkins
+   > E:\selenium\jenkins
+
+2> Copy prject to .jenkins folder
+Copy the Project "MavenProject"(E:\selenium\mavenRepo) to C:\Users\Administrator\.jenkins\
+
+3> Integrate TestNG Reporting Plugin into Jenkins job
+Plugin Manager -> install TestNG Results Plugin -> Install without restart
+
+4> Configure job
+http://localhost:8080 -> New Item -> freestyle project -> Advanced Project Options -> Use custom workspace 
+-> Directory: ${JENKINS_HOME}/MavenProject (it will point to C:\Users\Administrator\.jenkins\MavenProject)
+-> Build periodically: H 6 * * *
+-> Build -> Invoke top-level Maven targets -> Maven Version (Maven need to be configured previously) -> Goals: test -PRegression
+-> Post-build Actions -> Publish TestNG Results
+-> Save
+
+
+12. Excel/csv Data Driven
+1> Open excel data.xlsx -> save as -> data.csv
+2> Add dependency to pom.xml
+
+<!-- https://mvnrepository.com/artifact/net.sourceforge.javacsv/javacsv -->
+<dependency>
+    <groupId>net.sourceforge.javacsv</groupId>
+    <artifactId>javacsv</artifactId>
+    <version>2.0</version>
+</dependency>
+
+3>  参考虫师    “6.3.3 读取csv 文件”
+
+public class ReadCSV {
+	
+	public void readCSVFile(String filePath) throws IOException{
+		// ArrayList 用来保存数据
+		ArrayList<String[]> csvList = new ArrayList<String[]>();
+		// 一般用这编码读就可以了
+		CsvReader reader = new CsvReader(filePath, ',', Charset.forName("SJIS"));
+		// 跳过表头，如果需要表头，不要写这句
+		reader.readHeaders();
+		
+		while(reader.readRecord()){  // 逐行读入除表头的数据
+			csvList.add(reader.getValues());
+		}
+		
+		reader.close();
+		
+		for(int row=0; row<csvList.size(); row++){
+			System.out.println(csvList.get(row)[0]);
+			System.out.println(csvList.get(row)[1]);
+			System.out.println(csvList.get(row)[2]);
+			System.out.println(csvList.get(row)[3]);
+			System.out.println(csvList.get(row)[4]);
+			System.out.println(csvList.get(row)[5]);
+			System.out.println(csvList.get(row)[6]);
+			System.out.println(csvList.get(row)[7]);
+			System.out.println(csvList.get(row)[8]);
+			System.out.println("---------------------------");
+		}
+	
+	}
+
+}

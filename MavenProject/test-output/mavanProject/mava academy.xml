@@ -1,0 +1,45 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mava academy" failures="2" tests="3" time="19.369" errors="0">
+  <properties/>
+  <testcase name="basePage" time="9.253" classname="academy.HomePageTest"/>
+  <testcase name="basePageNavigation" time="0.004" classname="academy.ValidateTitle">
+    <failure type="org.openqa.selenium.remote.SessionNotFoundException" message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &amp;apos;2.47.2&amp;apos;, revision: &amp;apos;4d972c01cab1304452627f837654326a11eb92fe&amp;apos;, time: &amp;apos;2015-09-24 09:17:17&amp;apos;
+System info: host: &amp;apos;user-PC&amp;apos;, ip: &amp;apos;192.168.1.75&amp;apos;, os.name: &amp;apos;Windows 7&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;6.1&amp;apos;, java.version: &amp;apos;1.7.0_17&amp;apos;
+Driver info: driver.version: RemoteWebDriver">
+      <![CDATA[org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.47.2', revision: '4d972c01cab1304452627f837654326a11eb92fe', time: '2015-09-24 09:17:17'
+System info: host: 'user-PC', ip: '192.168.1.75', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:126)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:568)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:348)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElementByXPath(RemoteWebDriver.java:445)
+	at org.openqa.selenium.By$ByXPath.findElement(By.java:358)
+	at org.openqa.selenium.remote.RemoteWebDriver.findElement(RemoteWebDriver.java:340)
+	at pageObjects.LandingPage.getTitle(LandingPage.java:17)
+	at academy.ValidateTitle.basePageNavigation(ValidateTitle.java:34)
+... Removed 22 stack frames]]>
+    </failure>
+  </testcase>
+  <testcase name="basePageNavigation" time="0.01" classname="academy.ValidateTitle">
+    <failure type="org.openqa.selenium.remote.SessionNotFoundException" message="Session ID is null. Using WebDriver after calling quit()?
+Build info: version: &amp;apos;2.47.2&amp;apos;, revision: &amp;apos;4d972c01cab1304452627f837654326a11eb92fe&amp;apos;, time: &amp;apos;2015-09-24 09:17:17&amp;apos;
+System info: host: &amp;apos;user-PC&amp;apos;, ip: &amp;apos;192.168.1.75&amp;apos;, os.name: &amp;apos;Windows 7&amp;apos;, os.arch: &amp;apos;amd64&amp;apos;, os.version: &amp;apos;6.1&amp;apos;, java.version: &amp;apos;1.7.0_17&amp;apos;
+Driver info: driver.version: RemoteWebDriver">
+      <![CDATA[org.openqa.selenium.remote.SessionNotFoundException: Session ID is null. Using WebDriver after calling quit()?
+Build info: version: '2.47.2', revision: '4d972c01cab1304452627f837654326a11eb92fe', time: '2015-09-24 09:17:17'
+System info: host: 'user-PC', ip: '192.168.1.75', os.name: 'Windows 7', os.arch: 'amd64', os.version: '6.1', java.version: '1.7.0_17'
+Driver info: driver.version: RemoteWebDriver
+	at org.openqa.selenium.remote.HttpCommandExecutor.execute(HttpCommandExecutor.java:126)
+	at org.openqa.selenium.remote.service.DriverCommandExecutor.execute(DriverCommandExecutor.java:67)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:568)
+	at org.openqa.selenium.remote.RemoteWebDriver.execute(RemoteWebDriver.java:618)
+	at org.openqa.selenium.remote.RemoteWebDriver.getScreenshotAs(RemoteWebDriver.java:320)
+	at resources.Base.getScreenShot(Base.java:49)
+	at academy.Listeners.onTestFailure(Listeners.java:33)
+... Removed 18 stack frames]]>
+    </failure>
+  </testcase>
+</testsuite>

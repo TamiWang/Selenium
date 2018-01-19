@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="gcpi.FactoryConfigTest" failures="0" tests="1" time="53.047" errors="0">
+  <properties/>
+  <testcase name="createFactoryConfigTest" time="39.787" classname="gcpi.FactoryConfigTest"/>
+</testsuite>

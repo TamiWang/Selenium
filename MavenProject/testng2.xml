@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="mavanProject">
+
+	<listeners>
+		<listener class-name="academy.Listeners" />
+	</listeners>
+
+	<test name="mava academy" >
+		<classes>
+			<class name="academy.HomePageTest" />
+			<class name="academy.ValidateTitle" />
+		</classes>
+	</test>
+</suite>

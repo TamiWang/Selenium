@@ -1,0 +1,22 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" skipfailedinvocationCounts="false" verbose="1" name="Failed suite [mavanProject]" junit="false" annotations="JDK" data-provider-thread-count="10">
+  <listeners>
+    <listener class-name="academy.Listeners"/>
+  </listeners>
+  <test name="mava academy HomePageTest(failed)" junit="false" annotations="JDK">
+    <classes>
+      <class name="academy.ValidateTitle">
+        <methods>
+          <include name="initialize"/>
+          <include name="tearDown"/>
+        </methods>
+      </class>
+      <class name="academy.HomePageTest">
+        <methods>
+          <include name="basePage"/>
+          <include name="teadDown"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

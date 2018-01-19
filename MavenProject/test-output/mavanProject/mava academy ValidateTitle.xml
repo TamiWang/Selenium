@@ -1,0 +1,5 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite name="mava academy ValidateTitle" failures="0" tests="1" time="6.921" errors="0">
+  <properties/>
+  <testcase name="basePageNavigation" time="0.071" classname="academy.ValidateTitle"/>
+</testsuite>

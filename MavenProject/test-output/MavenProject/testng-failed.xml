@@ -1,0 +1,14 @@
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite thread-count="5" skipfailedinvocationCounts="false" verbose="1" name="Failed suite [MavenProject]" junit="false" parallel="false" annotations="JDK" data-provider-thread-count="10">
+  <test name="gcpi.FactoryConfigTest(failed)" junit="false" parallel="false" annotations="JDK">
+    <classes>
+      <class name="gcpi.FactoryConfigTest">
+        <methods>
+          <include name="createFactoryConfigTest"/>
+          <include name="tearDown"/>
+          <include name="setUp"/>
+        </methods>
+      </class>
+    </classes>
+  </test>
+</suite>

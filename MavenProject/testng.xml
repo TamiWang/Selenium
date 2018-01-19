@@ -1,0 +1,30 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<suite name="mavanProject">
+	<listeners>
+		<listener class-name="academy.Listeners" />
+		<listener class-name="gcpi.Listeners" />
+		<listener class-name="resources.ExtentReporterNG" />
+	</listeners>
+<!-- 
+	<test name="mava academy HomePageTest" >
+		<classes>
+			<class name="academy.HomePageTest" />
+		</classes>
+	</test>
+	
+		<test name="mava academy ValidateTitle" >
+		<classes>
+			<class name="academy.ValidateTitle" />
+		</classes>
+	</test>
+	 -->	
+	<test name="maven academy gcpi">
+		<classes>
+			<!-- <class name="gcpi.LoginTest" />
+									<class name="gcpi.BasicConfigTest" />
+			-->
+
+			<class name="gcpi.FactoryConfigTest" />
+		</classes>
+	</test>
+</suite>

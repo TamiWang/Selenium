@@ -1,0 +1,18 @@
+<testng-results>
+  <reporter-output>
+  </reporter-output>
+  <suite name="MavenProject" duration-ms="53047" started-at="2018-01-18T14:38:41Z" finished-at="2018-01-18T14:39:34Z">
+    <groups>
+    </groups>
+    <test name="gcpi.FactoryConfigTest" duration-ms="53047" started-at="2018-01-18T14:38:41Z" finished-at="2018-01-18T14:39:34Z">
+      <class name="gcpi.FactoryConfigTest">
+        <test-method status="PASS" signature="setUp()" name="setUp" is-config="true" duration-ms="11933" started-at="2018-01-18T14:38:41Z" finished-at="2018-01-18T14:38:53Z">
+        </test-method>
+        <test-method status="PASS" signature="createFactoryConfigTest()" name="createFactoryConfigTest" duration-ms="39787" started-at="2018-01-18T14:38:53Z" finished-at="2018-01-18T14:39:33Z">
+        </test-method>
+        <test-method status="PASS" signature="tearDown()" name="tearDown" is-config="true" duration-ms="1321" started-at="2018-01-18T14:39:33Z" finished-at="2018-01-18T14:39:34Z">
+        </test-method>
+      </class>
+    </test>
+  </suite>
+</testng-results>
